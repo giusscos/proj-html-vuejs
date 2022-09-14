@@ -74,6 +74,14 @@ img {
     }
 }
 
+.plans{
+    .card_wrapper{
+        .component_link{
+            color: $pj-text_black;
+        }
+    }
+}
+
 .header_component {
     gap: 1rem;
     display: flex;

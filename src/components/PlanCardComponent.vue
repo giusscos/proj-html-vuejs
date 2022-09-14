@@ -40,7 +40,7 @@
 export default {
     name: 'PlanCardComponent',
     props: {
-        plans: Object,
+        plans: Array,
     }
 }
 </script>
