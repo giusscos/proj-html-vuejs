@@ -1,14 +1,7 @@
 <template>
     <section class="section works">
         <div class="content container">
-            <div class="header_component">
-                <h2 class="component_title capitalize">
-                    {{ title }}
-                </h2>
-                <p class="component_desc">
-                    {{ desc }}
-                </p>
-            </div>
+            <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="grid_component">
                 <div class="grid_item" v-for="(img,i) in imgs" :key="`${i}workImg`">
                     <img :src="require(`../assets/img/${img}`)" :alt="`image-work-${i}`"/>
@@ -23,24 +16,27 @@
     </section>
 </template>
 <script>
+import HeaderSectionComponent from './HeaderSectionComponent.vue';
+
 export default {
-    name: 'WorksComponent',
+    name: "WorksComponent",
     props: {
         title: String,
         desc: String,
     },
-    data(){
+    data() {
         return {
             imgs: [
-                'case-study-gallery-3-1.jpg',
-                'case-study-gallery-1-1.jpg',
-                'case-study-gallery-2-1.jpg',
-                'case-study-gallery-4-1.jpg',
-                'case-study-gallery-5-1.jpg',
-                'case-study-gallery-6-1.jpg',
+                "case-study-gallery-3-1.jpg",
+                "case-study-gallery-1-1.jpg",
+                "case-study-gallery-2-1.jpg",
+                "case-study-gallery-4-1.jpg",
+                "case-study-gallery-5-1.jpg",
+                "case-study-gallery-6-1.jpg",
             ]
-        }
-    }
+        };
+    },
+    components: { HeaderSectionComponent }
 }
 </script>
 <style lang="scss" scoped>
