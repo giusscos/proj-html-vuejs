@@ -6,14 +6,19 @@
         <p class="component_desc">
             {{ cardDesc }}
         </p>
+        <a href="#" class="capitalize component_link">
+            {{ cardLink }} 
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+        </a>
     </div>
 </template>
 <script>
 export default {
-    name: 'InfoCardComponent',
+    name: 'ServiceCardComponent',
     props: {
         cardTitle: String,
         cardDesc: String,
+        cardLink: String,
     }
 }
 </script>
