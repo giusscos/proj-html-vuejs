@@ -3,41 +3,56 @@
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="card_component">
-                <div class="card_wrapper">
-                    <font-awesome-icon icon="fa-brands fa-google" class="card_icon" />
-                    <ServiceCardComponent :cardTitle="'Google SEO'"
-                        :cardDesc="'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?'" 
-                        :cardLink="cardLink"
-                        />
-                </div>
-                <div class="card_wrapper">
-                    <font-awesome-icon icon="fa-solid fa-gear" class="card_icon" />
-                    <ServiceCardComponent :cardTitle="'Brand strategy'"
-                        :cardDesc="'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?'" 
-                        :cardLink="cardLink"
-                        />
-                </div>
-                <div class="card_wrapper">
-                    <font-awesome-icon icon="fa-solid fa-building" class="card_icon" />
-                    <ServiceCardComponent :cardTitle="'Local SEO'"
-                        :cardDesc="'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?'" 
-                        :cardLink="cardLink"
-                        />
-                </div>
-                <div class="card_wrapper">
-                    <font-awesome-icon icon="fa-solid fa-chart-column" class="card_icon" />
-                    <ServiceCardComponent :cardTitle="'Seo Analysis'"
-                        :cardDesc="'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?'" 
-                        :cardLink="cardLink"
-                        />
+                <div class="card_wrapper" v-for="(card,i) in cardsService" :key="`${i}service`">
+                    <font-awesome-icon :icon="`${card.icon}`" class="card_icon" />
+                    <h3 class="component_title">
+                        {{ card.title }}
+                    </h3>
+                    <p class="component_desc">
+                        {{ card.desc }}
+                    </p>
+                    <a :href="card.link_href" class="capitalize component_link">
+                        {{ card.link_text }}
+                        <font-awesome-icon icon="fa-solid fa-chevron-right" />
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 </template>
 <script>
-import ServiceCardComponent from './ServiceCardComponent.vue';
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
+
+const cardsService = [
+    {
+        icon: 'fa-brands fa-google',
+        title: 'Google SEO',
+        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?',
+        link_href: '#',
+        link_text: 'Read more',
+    },
+    {
+        icon: 'ç fa-gear',
+        title: 'Brand strategy',
+        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?',
+        link_href: '#',
+        link_text: 'Read more',
+    },
+    {
+        icon: 'fa-solid fa-building',
+        title: 'Local SEO',
+        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?',
+        link_href: '#',
+        link_text: 'Read more',
+    },
+    {
+        icon: 'fa-solid fa-chart-column',
+        title: 'SEO Analysis',
+        desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, blanditiis. Laboriosam consequuntur veritatis tempore nemo obcaecati ducimus accusamus ipsum dolor?',
+        link_href: '#',
+        link_text: 'Read more',
+    },
+]
 
 export default {
     name: 'ServicesConponent',
@@ -47,13 +62,12 @@ export default {
     },
     data() {
         return {
-            cardLink: 'Read more',
+            cardsService
         }
     },
     components: {
-    ServiceCardComponent,
-    HeaderSectionComponent
-}
+        HeaderSectionComponent
+    }
 }
 </script>
 <style lang="scss" scoped>

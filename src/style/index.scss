@@ -47,15 +47,29 @@ img {
     text-transform: capitalize;
 }
 
-.component_wrapper {
+.card_wrapper {
+    aspect-ratio: 3/2;
+    text-align: center;
+    color: $pj-text_black;
+    padding: 2.5rem 1.5rem;
+    background-color: $pj-text_white;
+
+    .card_icon {
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+        color: $pj-text_hover;
+    }
+
     .component_title {
         padding-bottom: 1.5rem;
     }
-    .component_desc{
+
+    .component_desc {
         line-height: 1.75rem;
         padding-bottom: 1.5rem;
     }
-    .component_link{
+
+    .component_link {
         color: $pj-text_hover;
     }
 }
@@ -94,11 +108,11 @@ img {
         background-color: $pj-btn_bg_alternative;
     }
 
-    &.btn_border{
+    &.btn_border {
         font-weight: bold;
         border: 1px solid $pj-btn_border_gray;
 
-        &:hover{
+        &:hover {
             color: $pj-text_white;
             border: 1px solid $pj-btn_bg;
             background-color: $pj-btn_bg;
@@ -131,7 +145,7 @@ img {
 }
 
 // Card
-.content{
+.content {
     gap: 3rem;
     display: flex;
     flex-wrap: wrap;
