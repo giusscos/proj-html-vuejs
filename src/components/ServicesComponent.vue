@@ -1,14 +1,7 @@
 <template>
     <section class="section services">
         <div class="content container">
-            <div class="header_component">
-                <h2 class="component_title capitalize">
-                    {{ title }}
-                </h2>
-                <p class="component_desc">
-                    {{ desc }}
-                </p>
-            </div>
+            <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="card_component">
                 <div class="card_wrapper">
                     <font-awesome-icon icon="fa-brands fa-google" class="card_icon" />
@@ -44,6 +37,7 @@
 </template>
 <script>
 import ServiceCardComponent from './ServiceCardComponent.vue';
+import HeaderSectionComponent from './HeaderSectionComponent.vue';
 
 export default {
     name: 'ServicesConponent',
@@ -57,8 +51,9 @@ export default {
         }
     },
     components: {
-        ServiceCardComponent,
-    }
+    ServiceCardComponent,
+    HeaderSectionComponent
+}
 }
 </script>
 <style lang="scss" scoped>

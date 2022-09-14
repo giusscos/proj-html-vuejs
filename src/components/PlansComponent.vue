@@ -1,20 +1,14 @@
 <template>
     <section class="section plans">
         <div class="content container">
-            <div class="header_component">
-                <h2 class="component_title capitalize">
-                    {{ title }}
-                </h2>
-                <p class="component_desc">
-                    {{ desc }}
-                </p>
-            </div>
+            <HeaderSectionComponent :title="title" :desc="desc" />
             <PlanCardComponent :plans="plansCard"/>
         </div>
     </section>
 </template>
 <script>
 import PlanCardComponent from './PlanCardComponent.vue'
+import HeaderSectionComponent from './HeaderSectionComponent.vue'
 
 const plansCard = [
     {
@@ -54,8 +48,9 @@ export default {
         desc: String,
     },
     components: {
-        PlanCardComponent,
-    },
+    PlanCardComponent,
+    HeaderSectionComponent
+},
     data() {
         return {
             plansCard
@@ -74,70 +69,5 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../assets/img/background1.jpg);
-
-    .content {
-
-        .card_component {
-
-            .card_wrapper {
-                aspect-ratio: 4/6;
-                padding: 1rem 1.5rem;
-                color: $pj-text_black;
-                flex-basis: calc((100% / 4) - 1rem);
-                background-color: $pj-section_bg_ligth;
-
-                .plan_category {
-                    padding-bottom: 1.5rem;
-                }
-
-                .plan_price {
-                    display: flex;
-                    justify-content: center;
-                    padding-bottom: 1rem;
-
-                    font-size: 2rem;
-                    font-weight: bold;
-                    color: $pj-text_alternative;
-
-                    .top {
-                        font-size: 0.75rem;
-                        color: $pj-text_black;
-                    }
-
-                    .col_cent {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        justify-content: space-between;
-
-                        .top {
-                            &.colored {
-                                color: currentColor;
-                            }
-                        }
-
-                        .bottom {
-                            align-self: flex-end;
-                            color: $pj-text_black;
-                            font-size: 0.5rem;
-                        }
-                    }
-                }
-
-                .plan_info{
-                    padding: 1.75rem 0;
-                    opacity: 0.7;
-                }
-
-                .btn_wrapper{
-                    padding: 1rem 0;
-
-                    .component_link{
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-        }
-    }
 }
 </style>

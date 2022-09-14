@@ -1,14 +1,7 @@
 <template>
     <section class="section template">
         <div class="content container">
-            <div class="header_component">
-                <h2 class="component_title capitalize">
-                    {{ title }}
-                </h2>
-                <p class="component_desc">
-                    {{ desc }}
-                </p>
-            </div>
+            <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="card_component">
                 <div class="card_wrapper">
                     <font-awesome-icon icon="fa-solid fa-road" class="card_icon" />
@@ -34,6 +27,7 @@
 </template>
 <script>
 import InfoCardComponent from './InfoCardComponent.vue';
+import HeaderSectionComponent from './HeaderSectionComponent.vue';
 
 export default {
     name: 'InfoConponent',
@@ -43,6 +37,7 @@ export default {
     },
     components: {
         InfoCardComponent,
+        HeaderSectionComponent
     }
 }
 </script>
