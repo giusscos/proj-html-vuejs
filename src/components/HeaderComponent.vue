@@ -6,42 +6,12 @@
             </div>
             <nav class="header-main_nav">
                 <ul class="nav-list_wrapper">
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            Home
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            Who we are
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            What we do
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            Where we work
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            Careers
-                            <span class="badge badge_primary uppercase">
-                                Apply
+                    <li class="list_item" v-for="(nav,i) in navLinks" :key="`${i}navLink`">
+                        <a :href="nav.link_href" :class="nav.link_type === 'link' ? '' : 'btn btn_primary'" class="item_link capitalize">
+                            {{ nav.link_text }}
+                            <span :class="nav.link_badge ? 'badge badge_primary uppercase' : ''">
+                                {{ nav.link_badge }}
                             </span>
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="item_link capitalize">
-                            News
-                        </a>
-                    </li>
-                    <li class="list_item">
-                        <a href="#" class="btn btn_primary item_link uppercase">
-                            Get in touch now
                         </a>
                     </li>
                 </ul>
@@ -50,8 +20,57 @@
     </header>
 </template>
 <script>
+const navLinks = [
+    {
+        link_href: '#',
+        link_text: 'Home',
+        link_badge: '',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'Who we are',
+        link_badge: '',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'What we do',
+        link_badge: '',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'Where we work',
+        link_badge: '',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'Careers',
+        link_badge: 'Apply',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'News',
+        link_badge: '',
+        link_type: 'link', 
+    },
+    {
+        link_href: '#',
+        link_text: 'Get in touch now',
+        link_badge: '',
+        link_type: 'button', 
+    },
+]
 export default {
     name: 'HeaderComponent',
+    data() {
+        return {
+            navLinks,
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
