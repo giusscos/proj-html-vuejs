@@ -21,11 +21,19 @@ a {
     text-decoration: none;
 }
 
+img{
+    max-width: 100%;
+}
 // Layout
 .container {
     margin: 0 auto;
     padding: 0 0.5rem;
     max-width: 1200px;
+}
+
+.section {
+    padding: 5rem 0;
+    background-color: $pj-section_bg_ligth;
 }
 
 // Components
@@ -47,6 +55,7 @@ a {
         color: $pj-text_white;
         background-color: $pj-btn_bg;
     }
+
     &.btn_alternative {
         font-weight: bold;
         color: $pj-text_white;
@@ -61,16 +70,17 @@ a {
     border-radius: 0.5rem;
     border: 2px solid transparent;
 
-    &.badge_primary{
+    &.badge_primary {
         font-weight: bold;
         color: $pj-text_hover;
         border: 2px solid $pj-text_hover;
     }
 }
-.item_link{
-    
-    &:hover{
-        .badge{
+
+.item_link {
+
+    &:hover {
+        .badge {
             color: $pj-text_white;
             background-color: $pj-text_hover;
         }

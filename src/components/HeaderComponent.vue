@@ -58,7 +58,7 @@ export default {
 @import '../style/index.scss';
 
 .main_header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -90,7 +90,6 @@ export default {
                         &.btn_primary {
                             &:hover {
                                 color: $pj-text_white;
-                                transform: scale(1.1);
                             }
                         }
                     }

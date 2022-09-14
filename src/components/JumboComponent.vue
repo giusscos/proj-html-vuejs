@@ -9,7 +9,8 @@
                     compaigns made simple with avida
                 </h1>
                 <p class="jumbo_desc">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus aliquid iure modi inventore ut perspiciatis.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus aliquid iure modi inventore ut
+                    perspiciatis.
                 </p>
                 <div class="jumbo_btn">
                     <a href="#" class="btn btn_primary uppercase">
@@ -19,9 +20,6 @@
                         Contact us
                     </a>
                 </div>
-            </div>
-            <div class="content_img_wrapper">
-
             </div>
         </div>
     </section>
@@ -34,13 +32,13 @@ export default {
 <style lang="scss" scoped>
 @import '../style/index.scss';
 
-.section {
-    padding: 5rem 0;
+.jumbo_wrapper {
     height: 100vh;
-    background-image: url(../assets/img/1-hero-image.png);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url(../assets/img/1-hero-image.png);
 
     .content {
         height: 100%;
@@ -54,23 +52,24 @@ export default {
 
             color: $pj-text_white;
 
-            .jumbo_title{
+            .jumbo_title {
                 font-size: 3rem;
                 padding: 1rem 0;
             }
-        
-            .jumbo_desc{
+
+            .jumbo_desc {
                 opacity: 0.7;
                 padding: 1rem 0;
                 font-size: 1.25rem;
                 line-height: 2rem;
             }
-            .jumbo_btn{
+
+            .jumbo_btn {
                 gap: 1rem;
                 display: flex;
                 padding: 1rem 0.5rem;
 
-                .btn{
+                .btn {
                     padding-left: 2rem;
                     padding-right: 2rem;
                 }
