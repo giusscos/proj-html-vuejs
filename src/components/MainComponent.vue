@@ -3,13 +3,16 @@
         <JumboComponent />
         <InfoComponent 
             :title="'Meet the new agency SEO template from the avada team'"
-            :desc="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro adipisci quas reiciendis animi ullam! Harum.'" />
+            :desc="descSection" />
         <ServicesComponent 
             :title="'See our top notch services'"
-            :desc="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro adipisci quas reiciendis animi ullam! Harum.'" />
+            :desc="descSection" />
         <WorksComponent 
             :title="'Our work'"
-            :desc="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro adipisci quas reiciendis animi ullam! Harum.'" />
+            :desc="descSection" />
+        <PlansComponent 
+            :title="'Our Plans'"
+            :desc="descSection" />
     </main>
 </template>
 <script>
@@ -17,6 +20,7 @@ import JumboComponent from './JumboComponent.vue'
 import InfoComponent from './InfoComponent.vue'
 import ServicesComponent from './ServicesComponent.vue'
 import WorksComponent from './WorksComponent.vue'
+import PlansComponent from './PlansComponent.vue'
 
 export default {
     name: 'MainComponent',
@@ -25,6 +29,12 @@ export default {
         InfoComponent,
         ServicesComponent,
         WorksComponent,
+        PlansComponent,
+    },
+    data(){
+        return {
+            descSection: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro adipisci quas reiciendis animi ullam! Harum.',
+        }
     }
 }
 </script>

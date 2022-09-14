@@ -93,6 +93,17 @@ img {
         color: $pj-text_white;
         background-color: $pj-btn_bg_alternative;
     }
+
+    &.btn_border{
+        font-weight: bold;
+        border: 1px solid $pj-btn_border_gray;
+
+        &:hover{
+            color: $pj-text_white;
+            border: 1px solid $pj-btn_bg;
+            background-color: $pj-btn_bg;
+        }
+    }
 }
 
 // Badge
