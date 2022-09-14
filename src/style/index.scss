@@ -47,6 +47,11 @@ a {
         color: $pj-text_white;
         background-color: $pj-btn_bg;
     }
+    &.btn_alternative {
+        font-weight: bold;
+        color: $pj-text_white;
+        background-color: $pj-btn_bg_alternative;
+    }
 }
 
 // Badge

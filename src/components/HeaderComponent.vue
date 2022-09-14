@@ -58,6 +58,13 @@ export default {
 @import '../style/index.scss';
 
 .main_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    color: $pj-text_white;
+
     .header_wrapper {
         display: flex;
         padding: 1rem 0;
@@ -78,6 +85,13 @@ export default {
 
                         &:hover {
                             color: $pj-text_hover;
+                        }
+
+                        &.btn_primary {
+                            &:hover {
+                                color: $pj-text_white;
+                                transform: scale(1.1);
+                            }
                         }
                     }
                 }
