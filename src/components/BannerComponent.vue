@@ -37,12 +37,13 @@ export default {
     background-image: url(../assets/img/case-study-gallery-3-1.jpg);
 
     .black_filter{
-        padding: 5rem 0;
+        padding: 8.75rem 0;
         opacity: 0.8;
     }
 
     .content {
         align-items: center;
+        gap: 2rem;
 
         .banner_cta_wrapper {
             text-align: center;
