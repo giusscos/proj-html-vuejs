@@ -45,16 +45,16 @@ export default {
 @import '../style/index.scss';
 
 .works {
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
 
     .grid_component {
+        gap: 1rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        
+        padding-bottom: 2rem;
     }
 
-    .btn_wrapper {
-        padding-top: 3rem;
-    }
+
 }
 </style>
