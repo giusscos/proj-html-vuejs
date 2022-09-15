@@ -105,20 +105,22 @@ export default {
             flex-basis: calc((100% / 4) - 1rem);
 
             .plan_category {
-                padding-bottom: 1.5rem;
+                font-size: 1.5rem;
+                padding: 1rem 0 3rem;
             }
 
             .plan_price {
                 display: flex;
                 justify-content: center;
-                padding-bottom: 1rem;
 
-                font-size: 2rem;
+                padding-bottom: 3.5rem;
+
+                font-size: 3rem;
                 font-weight: bold;
                 color: $pj-text_alternative;
 
                 .top {
-                    font-size: 0.75rem;
+                    font-size: 1rem;
                     color: $pj-text_black;
                 }
 
@@ -135,15 +137,16 @@ export default {
                     }
 
                     .bottom {
-                        align-self: flex-end;
+                        font-size: 0.8rem;
                         color: $pj-text_black;
-                        font-size: 0.5rem;
+
+                        align-self: flex-end;
                     }
                 }
             }
 
             .plan_info {
-                padding: 1.75rem 0;
+                padding-bottom: 2.5rem;
                 opacity: 0.7;
             }
 

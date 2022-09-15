@@ -62,7 +62,7 @@ export default {
 @import '../style/index.scss';
 
 .plans {
-    height: 100vh;
+    padding-bottom: 7rem;
     color: $pj-text_white;
 
     background-size: cover;
