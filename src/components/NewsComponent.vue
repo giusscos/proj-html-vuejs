@@ -55,10 +55,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .news{
-    padding-bottom: 4rem;
-    
-    .btn_wrapper {
-        padding-top: 3rem;
-    }
+    padding-bottom: 7rem;
 }
 </style>

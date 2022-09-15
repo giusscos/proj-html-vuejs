@@ -163,9 +163,10 @@ export default {
 
 .news {
     .card_component {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
 
         .card_wrapper {
-            flex-grow: 1;
             padding: 0;
             background-color: transparent;
 
@@ -173,12 +174,11 @@ export default {
 
                 .component_img {
                     display: inline-block;
-                    object-fit: cover;
-                    object-position: center;
                 }
             }
 
             .component_title {
+                font-size: 1.25rem;
                 padding: 1rem 0 0.5rem;
                 color: $pj-text_hover;
             }
@@ -189,6 +189,7 @@ export default {
             }
 
             .component_desc {
+                line-height: 1.5rem;
                 padding: 0 3rem;
             }
         }
