@@ -28,6 +28,13 @@
                     Powered by <a href="#" class="credits_link">WordPress</a>
                 </span>
             </div>
+            <ul class="socials_wrapper">
+                <li class="list_item" v-for="(social,i) in socials" :key="`${i}social`">
+                    <a :href="social.link_href" class="item_link">
+                        <font-awesome-icon :icon="`fa-brands ${social.icon}`" />
+                    </a>   
+                </li>
+            </ul>
         </div>
     </footer>
 </template>
@@ -83,11 +90,31 @@ const navLinks = [
         link_type: 'button',
     },
 ]
+
+const socials = [
+    {
+        icon: 'fa-facebook',
+        link_href: '#',
+    },
+    {
+        icon: 'fa-instagram',
+        link_href: '#',
+    },
+    {
+        icon: 'fa-twitter',
+        link_href: '#',
+    },
+    {
+        icon: 'fa-youtube',
+        link_href: '#',
+    },
+]
 export default {
     name: 'FooterComponent',
     data() {
         return {
-            navLinks
+            navLinks,
+            socials
         }
     }
 }
@@ -140,6 +167,21 @@ export default {
                 .credits_link {
                     color: $pj-text_black;
                     font-weight: bold;
+                }
+            }
+        }
+       
+        .socials_wrapper{
+            gap: 2rem;
+            justify-content: center;
+            .list_item{
+                .item_link{
+                    color: $pj-btn_border_gray;
+                    font-size: 1.75rem;
+
+                    &:hover{
+                        color: $pj-text_black;
+                    }
                 }
             }
         }
