@@ -6,7 +6,7 @@
             </div>
             <nav class="header-main_nav">
                 <ul class="nav-list_wrapper">
-                    <li class="list_item" v-for="(nav,i) in navLinks" :key="`${i}navLink`">
+                    <li class="list_item" :class="nav.active ? 'active' : ''" v-for="(nav,i) in navLinks" :key="`${i}navLink`">
                         <a :href="nav.link_href" :class="nav.link_type === 'link' ? '' : 'btn btn_primary'" class="item_link capitalize">
                             {{ nav.link_text }}
                             <span :class="nav.link_badge ? 'badge badge_primary uppercase' : ''">
@@ -22,46 +22,53 @@
 <script>
 const navLinks = [
     {
+        active: true,
         link_href: '#',
         link_text: 'Home',
         link_badge: '',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'Who we are',
         link_badge: '',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'What we do',
         link_badge: '',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'Where we work',
         link_badge: '',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'Careers',
         link_badge: 'Apply',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'News',
         link_badge: '',
-        link_type: 'link', 
+        link_type: 'link',
     },
     {
+        active: false,
         link_href: '#',
         link_text: 'Get in touch now',
         link_badge: '',
-        link_type: 'button', 
+        link_type: 'button',
     },
 ]
 export default {
@@ -100,6 +107,9 @@ export default {
                     display: flex;
                     align-items: center;
 
+                    &.active{
+                        color: $pj-text_hover;
+                    }
                     .item_link {
 
                         &:hover {
