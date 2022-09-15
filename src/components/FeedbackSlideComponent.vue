@@ -58,7 +58,7 @@ export default {
         }
 
         >.component_desc{
-            width: 50%;
+            width: 600px;
             line-height: 1.75rem;
             text-align: center;
         }

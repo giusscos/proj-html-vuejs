@@ -63,19 +63,23 @@ export default {
 @import '../style/index.scss';
 
 .feedback {
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
     background-color: $pj-text_white;
 
-    .clients_wrapper{
-        border-top: 1px solid $pj-btn_border_gray;
-        display: flex;
-        flex-grow: 1;
-        justify-content: space-evenly;
+    .content{
+        gap: 1.5rem;
 
-        span{
-            cursor: pointer;
-            padding: 2rem 0;
-            width: 100px;
+        .clients_wrapper{
+            border-top: 1px solid $pj-btn_border_gray;
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-evenly;
+    
+            span{
+                cursor: pointer;
+                padding: 3rem 0;
+                width: 100px;
+            }
         }
     }
 }
