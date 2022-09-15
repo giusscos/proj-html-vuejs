@@ -16,6 +16,8 @@
         <NewsComponent 
             :title="'Our news'" 
             :desc="descSection" />
+        <FeedbackComponent 
+            :title="'What our clients say'" />
     </main>
 </template>
 <script>
@@ -25,6 +27,7 @@ import ServicesComponent from './ServicesComponent.vue'
 import WorksComponent from './WorksComponent.vue'
 import PlansComponent from './PlansComponent.vue'
 import NewsComponent from './NewsComponent.vue'
+import FeedbackComponent from './FeedbackComponent.vue'
 
 export default {
     name: 'MainComponent',
@@ -34,7 +37,8 @@ export default {
     ServicesComponent,
     WorksComponent,
     PlansComponent,
-    NewsComponent
+    NewsComponent,
+    FeedbackComponent
 },
     data(){
         return {

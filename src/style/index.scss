@@ -47,6 +47,10 @@ img {
     text-transform: capitalize;
 }
 
+.italic{
+    font-style: italic;
+}
+
 .card_wrapper {
     aspect-ratio: 3/2;
     text-align: center;
@@ -74,9 +78,9 @@ img {
     }
 }
 
-.plans{
-    .card_wrapper{
-        .component_link{
+.plans {
+    .card_wrapper {
+        .component_link {
             color: $pj-text_black;
         }
     }
@@ -174,6 +178,27 @@ img {
                 padding-bottom: 1.5rem;
                 color: $pj-text_hover;
             }
+        }
+    }
+}
+// GoTo Dot
+.goto_wrapper{
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .goto_dot{
+        cursor: pointer;
+        width: 1rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        background-color: transparent;
+        border: 2px solid $pj-btn_border_gray;
+
+        &.active{
+            background-color: $pj-text_black;
         }
     }
 }
