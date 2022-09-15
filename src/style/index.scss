@@ -47,11 +47,11 @@ img {
     text-transform: capitalize;
 }
 
-.italic{
+.italic {
     font-style: italic;
 }
 
-.black_filter{
+.black_filter {
     background-color: $pj-text_black;
 }
 
@@ -109,23 +109,22 @@ img {
 
 // Button
 .btn {
+    font-size: 0.75rem;
+    font-weight: bold;
     border-radius: 1.25rem;
-    padding: 0.75rem 1.25rem;
+    padding: 0.81rem 1.5rem;
 
     &.btn_primary {
-        font-weight: bold;
         color: $pj-text_white;
         background-color: $pj-btn_bg;
     }
 
     &.btn_alternative {
-        font-weight: bold;
         color: $pj-text_white;
         background-color: $pj-btn_bg_alternative;
     }
 
     &.btn_border {
-        font-weight: bold;
         border: 1px solid $pj-btn_border_gray;
 
         &:hover {
@@ -185,15 +184,16 @@ img {
         }
     }
 }
+
 // GoTo Dot
-.goto_wrapper{
+.goto_wrapper {
     flex-basis: 100%;
     gap: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .goto_dot{
+    .goto_dot {
         cursor: pointer;
         width: 1rem;
         aspect-ratio: 1/1;
@@ -202,7 +202,7 @@ img {
         background-color: transparent;
         border: 2px solid $pj-btn_border_gray;
 
-        &.active{
+        &.active {
             background-color: $pj-text_black;
         }
     }

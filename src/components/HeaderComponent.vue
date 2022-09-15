@@ -104,6 +104,9 @@ export default {
                 display: flex;
 
                 .list_item {
+                    font-size: 0.9rem;
+                    font-weight: bold;
+
                     display: flex;
                     align-items: center;
 
