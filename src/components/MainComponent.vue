@@ -11,7 +11,10 @@
             :title="'Our work'"
             :desc="descSection" />
         <PlansComponent 
-            :title="'Our Plans'"
+            :title="'Our plans'"
+            :desc="descSection" />
+        <NewsComponent 
+            :title="'Our news'" 
             :desc="descSection" />
     </main>
 </template>
@@ -21,16 +24,18 @@ import TemplateComponent from './TemplateComponent.vue'
 import ServicesComponent from './ServicesComponent.vue'
 import WorksComponent from './WorksComponent.vue'
 import PlansComponent from './PlansComponent.vue'
+import NewsComponent from './NewsComponent.vue'
 
 export default {
     name: 'MainComponent',
     components: {
-        JumboComponent,
-        TemplateComponent,
-        ServicesComponent,
-        WorksComponent,
-        PlansComponent,
-    },
+    JumboComponent,
+    TemplateComponent,
+    ServicesComponent,
+    WorksComponent,
+    PlansComponent,
+    NewsComponent
+},
     data(){
         return {
             descSection: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro adipisci quas reiciendis animi ullam! Harum.',
