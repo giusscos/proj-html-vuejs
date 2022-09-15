@@ -7,6 +7,11 @@
                 <span :class="dot.active ? 'active' : ''" class="goto_dot"  v-for="(dot,i) in feedbacks" :key="`${i}dot`">
                 </span>
             </div>
+            <div class="clients_wrapper">
+                <span v-for="(client,i) in clients" :key="`${i}client`">
+                    <img :src="require(`../assets/img/${client}`)" :alt="`client: ${i}`">
+                </span>
+            </div>
         </div>
     </section>
 </template>
@@ -31,6 +36,15 @@ const feedbacks = [
     },
 ]
 
+const clients = [
+    'clients_partner_1-200x202.png',
+    'clients_partner_2-200x202.png',
+    'clients_partner_3-200x202.png',
+    'clients_partner_4-200x202.png',
+    'clients_partner_5-200x202.png',
+    'clients_partner_6-200x202.png',
+]
+
 export default {
     name: "FeedbackComponent.vue",
     props: {
@@ -39,7 +53,8 @@ export default {
     components: { HeaderSectionComponent, FeedbackSlideComponent },
     data(){
         return {
-            feedbacks
+            feedbacks,
+            clients
         }
     }
 }
@@ -50,5 +65,18 @@ export default {
 .feedback {
     padding-bottom: 3rem;
     background-color: $pj-text_white;
+
+    .clients_wrapper{
+        border-top: 1px solid $pj-btn_border_gray;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+
+        span{
+            cursor: pointer;
+            padding: 2rem 0;
+            width: 100px;
+        }
+    }
 }
 </style>
