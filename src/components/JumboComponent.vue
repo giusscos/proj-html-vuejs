@@ -3,14 +3,10 @@
         <div class="content container">
             <div class="content_text_wrapper">
                 <h1 class="jumbo_title capitalize">
-                    <span class="uppercase">
-                        Sem
-                    </span>
-                    compaigns made simple with avida
+                    SEM compaigns made simple with avida
                 </h1>
                 <p class="jumbo_desc">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus aliquid iure modi inventore ut
-                    perspiciatis.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus aliquid iure modi inventore ut perspiciatis.
                 </p>
                 <div class="jumbo_btn">
                     <a href="#" class="btn btn_primary uppercase">
