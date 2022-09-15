@@ -2,7 +2,7 @@
     <section class="section template">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <TemplateCardComponent :cards="cardsTemplate" />
+            <CardComponent :cards="cardsTemplate" />
             <div class="img_template">
                 <img src="../assets/img/agency-seo-desk-front.jpg" alt="agency-seo" />
             </div>
@@ -12,7 +12,7 @@
 
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
-import TemplateCardComponent from './TemplateCardComponent.vue';
+import CardComponent from './CardComponent.vue';
 
 const cardsTemplate = [
     {
@@ -40,7 +40,7 @@ export default {
     },
     components: {
     HeaderSectionComponent,
-    TemplateCardComponent
+    CardComponent
 },
     data() {
         return {
