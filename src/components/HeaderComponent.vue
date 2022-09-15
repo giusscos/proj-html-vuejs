@@ -100,7 +100,7 @@ export default {
             margin-left: auto;
 
             .nav-list_wrapper {
-                gap: 1rem;
+                gap: 2.25rem;
                 display: flex;
 
                 .list_item {

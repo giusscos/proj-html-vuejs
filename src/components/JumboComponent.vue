@@ -49,25 +49,25 @@ export default {
             color: $pj-text_white;
 
             .jumbo_title {
-                font-size: 3rem;
-                padding: 1rem 0;
+                font-size: 3.25rem;
+                padding: 0.5rem 0;
             }
 
             .jumbo_desc {
                 opacity: 0.7;
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 font-size: 1.25rem;
                 line-height: 2rem;
             }
 
             .jumbo_btn {
-                gap: 1rem;
+                gap: 1.25rem;
                 display: flex;
-                padding: 1rem 0.5rem;
+                padding: 2rem 0;
 
                 .btn {
-                    padding-left: 2rem;
-                    padding-right: 2rem;
+                    border-radius: 1.5rem;
+                    padding: 1.05rem 2rem;
                 }
             }
         }
