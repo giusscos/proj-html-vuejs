@@ -93,9 +93,10 @@ export default {
 
     .header_wrapper {
         display: flex;
+        align-items: center;
+
         padding-top: 1rem;
         padding-bottom: 1rem;
-        align-items: center;
 
         .header-main_nav {
             margin-left: auto;

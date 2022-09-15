@@ -34,7 +34,7 @@ img {
 }
 
 .section {
-    padding: 6.25rem 0;
+    padding: 6.25rem 0 10rem;
     background-color: $pj-section_bg_ligth;
 }
 
@@ -170,6 +170,7 @@ img {
 
     .card_component {
         flex-basis: 100%;
+        padding-top: 3.5rem;
 
         gap: 1rem;
         display: flex;

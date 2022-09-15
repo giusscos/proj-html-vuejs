@@ -62,8 +62,6 @@ export default {
 @import '../style/index.scss';
 
 .services {
-    padding-bottom: 5rem;
-
     color: $pj-text_white;
     background-color: $pj-section_bg_darker;
 
