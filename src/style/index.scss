@@ -51,6 +51,10 @@ img {
     font-style: italic;
 }
 
+.black_filter{
+    background-color: $pj-text_black;
+}
+
 .card_wrapper {
     aspect-ratio: 3/2;
     text-align: center;

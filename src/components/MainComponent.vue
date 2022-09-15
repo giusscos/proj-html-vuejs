@@ -18,6 +18,13 @@
             :desc="descSection" />
         <FeedbackComponent 
             :title="'What our clients say'" />
+        <BannerComponent 
+            :title="'Start your free consultation'"
+            :desc="descSection"
+            :link="{
+                href: '#',
+                text: 'Contact us now'
+            }" />
     </main>
 </template>
 <script>
@@ -28,6 +35,7 @@ import WorksComponent from './WorksComponent.vue'
 import PlansComponent from './PlansComponent.vue'
 import NewsComponent from './NewsComponent.vue'
 import FeedbackComponent from './FeedbackComponent.vue'
+import BannerComponent from './BannerComponent.vue'
 
 export default {
     name: 'MainComponent',
@@ -38,7 +46,8 @@ export default {
     WorksComponent,
     PlansComponent,
     NewsComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    BannerComponent
 },
     data(){
         return {
