@@ -39,9 +39,9 @@ export default {
         desc: String,
     },
     components: {
-    HeaderSectionComponent,
-    CardComponent
-},
+        HeaderSectionComponent,
+        CardComponent
+    },
     data() {
         return {
             cardsTemplate
@@ -49,3 +49,8 @@ export default {
     }
 }
 </script>
+<style lang="scss" scoped>
+.template {
+    padding-bottom: 0;
+}
+</style>

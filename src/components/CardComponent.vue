@@ -75,7 +75,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../style/index.scss';
-
+.template{
+    .card_component{
+        padding-top: 3.5rem;
+    }
+}
 .services {
     .card_component {
 
@@ -91,12 +95,13 @@ export default {
     .card_component {
 
         .card_wrapper {
+            color: $pj-text_black;
+            background-color: $pj-section_bg_ligth;
+            
             aspect-ratio: 4/6;
             padding: 1rem 1.5rem;
-            color: $pj-text_black;
             flex-basis: calc((100% / 4) - 1rem);
-            background-color: $pj-section_bg_ligth;
-
+            
             .plan_category {
                 padding-bottom: 1.5rem;
             }

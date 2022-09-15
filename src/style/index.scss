@@ -29,12 +29,12 @@ img {
 // Layout
 .container {
     margin: 0 auto;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
     max-width: 1200px;
 }
 
 .section {
-    padding-top: 5rem;
+    padding: 6.25rem 0;
     background-color: $pj-section_bg_ligth;
 }
 
@@ -91,19 +91,21 @@ img {
 }
 
 .header_component {
-    gap: 1rem;
+    gap: 2rem;
     display: flex;
-    flex-basis: 400px;
+    flex-basis: 600px;
     flex-direction: column;
 
     text-align: center;
 
     .component_title {
-        line-height: 2.25rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 
     .component_desc {
-        line-height: 1.75rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -177,9 +179,17 @@ img {
             text-align: center;
 
             .card_icon {
-                font-size: 1.5rem;
+                font-size: 2rem;
                 padding-bottom: 1.5rem;
                 color: $pj-text_hover;
+            }
+
+            .component_title {
+                font-size: 1.5rem;
+            }
+            .component_desc {
+                font-size: 0.88rem;
+                line-height: 1.3rem;
             }
         }
     }
