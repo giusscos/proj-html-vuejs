@@ -1,7 +1,7 @@
 <template>
     <main class="main_content">
         <JumboComponent />
-        <InfoComponent 
+        <TemplateComponent 
             :title="'Meet the new agency SEO template from the avada team'"
             :desc="descSection" />
         <ServicesComponent 
@@ -17,7 +17,7 @@
 </template>
 <script>
 import JumboComponent from './JumboComponent.vue'
-import InfoComponent from './InfoComponent.vue'
+import TemplateComponent from './TemplateComponent.vue'
 import ServicesComponent from './ServicesComponent.vue'
 import WorksComponent from './WorksComponent.vue'
 import PlansComponent from './PlansComponent.vue'
@@ -26,7 +26,7 @@ export default {
     name: 'MainComponent',
     components: {
         JumboComponent,
-        InfoComponent,
+        TemplateComponent,
         ServicesComponent,
         WorksComponent,
         PlansComponent,

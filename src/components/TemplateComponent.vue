@@ -2,7 +2,7 @@
     <section class="section template">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <div class="card_component">
+            <!-- <div class="card_component">
                 <div class="card_wrapper" v-for="(card,i) in cardsTemplate" :key="`${i}template`">
                     <font-awesome-icon :icon="`fa-solid ${card.icon}`" class="card_icon" />
                     <h3 class="component_title">
@@ -12,7 +12,8 @@
                         {{ card.desc }}
                     </p>
                 </div>
-            </div>
+            </div> -->
+            <TemplateCardComponent :cards="cardsTemplate" />
             <div class="img_template">
                 <img src="../assets/img/agency-seo-desk-front.jpg" alt="agency-seo" />
             </div>
@@ -22,6 +23,7 @@
 
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
+import TemplateCardComponent from './TemplateCardComponent.vue';
 
 const cardsTemplate = [
     {
@@ -42,14 +44,15 @@ const cardsTemplate = [
 ]
 
 export default {
-    name: 'InfoConponent',
+    name: 'TemplateConponent',
     props: {
         title: String,
         desc: String,
     },
     components: {
-        HeaderSectionComponent
-    },
+    HeaderSectionComponent,
+    TemplateCardComponent
+},
     data() {
         return {
             cardsTemplate
@@ -57,5 +60,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-</style>

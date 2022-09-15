@@ -4,11 +4,11 @@
             <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="grid_component">
                 <div class="grid_item" v-for="(img,i) in imgs" :key="`${i}workImg`">
-                    <img :src="require(`../assets/img/${img}`)" :alt="`image-work-${i}`"/>
+                    <img :src="require(`../assets/img/${img}`)" :alt="`image-work-${i}`" />
                 </div>
             </div>
             <div class="btn_wrapper">
-                <a class="btn btn_primary uppercase">
+                <a href="#" class="btn btn_primary uppercase">
                     View our work
                 </a>
             </div>
@@ -18,6 +18,15 @@
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
 
+const imgs = [
+    "case-study-gallery-3-1.jpg",
+    "case-study-gallery-2-1.jpg",
+    "case-study-gallery-1-1.jpg",
+    "case-study-gallery-4-1.jpg",
+    "case-study-gallery-5-1.jpg",
+    "case-study-gallery-6-1.jpg",
+]
+
 export default {
     name: "WorksComponent",
     props: {
@@ -26,14 +35,7 @@ export default {
     },
     data() {
         return {
-            imgs: [
-                "case-study-gallery-3-1.jpg",
-                "case-study-gallery-1-1.jpg",
-                "case-study-gallery-2-1.jpg",
-                "case-study-gallery-4-1.jpg",
-                "case-study-gallery-5-1.jpg",
-                "case-study-gallery-6-1.jpg",
-            ]
+            imgs
         };
     },
     components: { HeaderSectionComponent }
@@ -41,15 +43,17 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../style/index.scss';
-.works{
+
+.works {
     padding-bottom: 5rem;
 
-    .grid_component{
+    .grid_component {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
-    .btn_wrapper{
+
+    .btn_wrapper {
         padding-top: 3rem;
     }
 }
