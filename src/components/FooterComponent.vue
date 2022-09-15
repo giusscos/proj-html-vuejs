@@ -32,7 +32,7 @@
                 <li class="list_item" v-for="(social,i) in socials" :key="`${i}social`">
                     <a :href="social.link_href" class="item_link">
                         <font-awesome-icon :icon="`fa-brands ${social.icon}`" />
-                    </a>   
+                    </a>
                 </li>
             </ul>
         </div>
@@ -109,6 +109,7 @@ const socials = [
         link_href: '#',
     },
 ]
+
 export default {
     name: 'FooterComponent',
     data() {
@@ -123,7 +124,7 @@ export default {
 @import '../style/index.scss';
 
 .main_footer {
-    padding: 4rem 0;
+    padding: 3rem 0;
 
     .content {
         >* {
@@ -134,54 +135,69 @@ export default {
 
         .logo_wrapper {
             justify-content: center;
-            padding-bottom: 2rem;
         }
 
         .nav-list_wrapper {
-            justify-content: space-evenly;
+            gap: 2.25rem;
+            display: flex;
+            justify-content: center;
 
             .list_item {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: $pj-btn_border_gray;
+
+                display: flex;
+                align-items: center;
 
                 .item_link {
+
+                    &:hover {
+                        color: $pj-text_hover;
+                    }
 
                     &.active {
                         color: $pj-text_hover;
                     }
 
-                    &:hover {
-                        color: $pj-text_hover;
+                    &.btn_primary {
+
+                        &:hover {
+                            color: $pj-text_white;
+                        }
                     }
                 }
             }
         }
+    }
 
-        .credits_footer {
-            padding-top: 2rem;
-            justify-content: center;
+    .credits_footer {
+        padding-top: 1rem;
+        justify-content: center;
 
-            span {
+        span {
+            color: $pj-btn_border_gray;
+            padding: 0 0.5rem;
+            border-right: 2px solid $pj-btn_border_gray;
+
+            .credits_link {
+                color: $pj-text_black;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .socials_wrapper {
+        gap: 2rem;
+        justify-content: center;
+
+        .list_item {
+            .item_link {
                 color: $pj-btn_border_gray;
-                padding: 0 0.5rem;
-                border-right: 2px solid $pj-btn_border_gray;
+                font-size: 1.75rem;
 
-                .credits_link {
+                &:hover {
                     color: $pj-text_black;
-                    font-weight: bold;
-                }
-            }
-        }
-       
-        .socials_wrapper{
-            gap: 2rem;
-            justify-content: center;
-            .list_item{
-                .item_link{
-                    color: $pj-btn_border_gray;
-                    font-size: 1.75rem;
-
-                    &:hover{
-                        color: $pj-text_black;
-                    }
                 }
             }
         }
