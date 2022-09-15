@@ -2,26 +2,13 @@
     <section class="section services">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <div class="card_component">
-                <div class="card_wrapper" v-for="(card,i) in cardsService" :key="`${i}service`">
-                    <font-awesome-icon :icon="`${card.icon}`" class="card_icon" />
-                    <h3 class="component_title">
-                        {{ card.title }}
-                    </h3>
-                    <p class="component_desc">
-                        {{ card.desc }}
-                    </p>
-                    <a :href="card.link_href" class="capitalize component_link">
-                        {{ card.link_text }}
-                        <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                    </a>
-                </div>
-            </div>
+            <ServiceCardComponent :cards="cardsService" />
         </div>
     </section>
 </template>
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
+import ServiceCardComponent from './ServiceCardComponent.vue';
 
 const cardsService = [
     {
@@ -66,8 +53,9 @@ export default {
         }
     },
     components: {
-        HeaderSectionComponent
-    }
+    HeaderSectionComponent,
+    ServiceCardComponent
+}
 }
 </script>
 <style lang="scss" scoped>
@@ -83,17 +71,5 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../assets/img/pattern_background.png);
-
-    .content {
-
-        .card_component {
-
-            .card_wrapper {
-                aspect-ratio: 3/2;
-                color: $pj-text_white;
-                background-color: $pj-section_bg_dark;
-            }
-        }
-    }
 }
 </style>

@@ -2,17 +2,6 @@
     <section class="section template">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <!-- <div class="card_component">
-                <div class="card_wrapper" v-for="(card,i) in cardsTemplate" :key="`${i}template`">
-                    <font-awesome-icon :icon="`fa-solid ${card.icon}`" class="card_icon" />
-                    <h3 class="component_title">
-                        {{ card.title }}
-                    </h3>
-                    <p class="component_desc">
-                        {{ card.desc }}
-                    </p>
-                </div>
-            </div> -->
             <TemplateCardComponent :cards="cardsTemplate" />
             <div class="img_template">
                 <img src="../assets/img/agency-seo-desk-front.jpg" alt="agency-seo" />
