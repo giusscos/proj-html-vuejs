@@ -3,9 +3,10 @@
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
             <div class="grid_component">
-                <div class="grid_item" v-for="(img,i) in imgs" :key="`${i}workImg`">
+                <a href="#" class="grid_item" v-for="(img,i) in imgs" :key="`${i}workImg`">
+                    <font-awesome-icon icon="fa-solid fa-link" class="work_link_icon" />
                     <img :src="require(`../assets/img/${img}`)" :alt="`image-work-${i}`" />
-                </div>
+                </a>
             </div>
             <div class="btn_wrapper">
                 <a href="#" class="btn btn_primary uppercase">
@@ -51,8 +52,46 @@ export default {
         gap: 1rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
+
         padding-bottom: 2rem;
+
+        .grid_item {
+            position: relative;
+
+            .work_link_icon,
+            &:after {
+                position: absolute;
+                opacity: 0;
+                transition: 300ms ease-in-out;
+            }
+
+            .work_link_icon {
+                z-index: 99;
+                font-size: 4rem;
+                color: $pj-text_white;
+
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:after {
+                content: '';
+                background: linear-gradient(180deg, rgb(145, 148, 255) 0%, rgba(255, 255, 255, 1) 100%);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            &:hover {
+
+                .work_link_icon,
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
 

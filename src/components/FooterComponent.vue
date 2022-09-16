@@ -4,16 +4,7 @@
             <div class="logo_wrapper">
                 <img src="../assets/img/logo_seo_1x.png" alt="logo-avada" />
             </div>
-            <ul class="nav-list_wrapper">
-                <li class="list_item" v-for="(nav,i) in navLinks" :key="`${i}navLink`">
-                    <a :href="nav.link_href" :class="nav.active ? 'active' : ''" class="item_link capitalize">
-                        {{ nav.link_text }}
-                        <span :class="nav.link_badge ? 'badge badge_primary uppercase' : ''">
-                            {{ nav.link_badge }}
-                        </span>
-                    </a>
-                </li>
-            </ul>
+            <NavList />
             <div class="credits_footer">
                 <span>
                     &copy; Copyright 2012 - 2020
@@ -39,6 +30,7 @@
     </footer>
 </template>
 <script>
+import NavList from './NavList.vue'
 const navLinks = [
     {
         active: true,
@@ -111,13 +103,14 @@ const socials = [
 ]
 
 export default {
-    name: 'FooterComponent',
+    name: "FooterComponent",
     data() {
         return {
             navLinks,
             socials
-        }
-    }
+        };
+    },
+    components: { NavList }
 }
 </script>
 <style lang="scss" scoped>
@@ -131,43 +124,11 @@ export default {
             flex-basis: 100%;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .logo_wrapper {
             justify-content: center;
-        }
-
-        .nav-list_wrapper {
-            gap: 2.25rem;
-            display: flex;
-            justify-content: center;
-
-            .list_item {
-                font-size: 0.9rem;
-                font-weight: bold;
-                color: $pj-btn_border_gray;
-
-                display: flex;
-                align-items: center;
-
-                .item_link {
-
-                    &:hover {
-                        color: $pj-text_hover;
-                    }
-
-                    &.active {
-                        color: $pj-text_hover;
-                    }
-
-                    &.btn_primary {
-
-                        &:hover {
-                            color: $pj-text_white;
-                        }
-                    }
-                }
-            }
         }
     }
 

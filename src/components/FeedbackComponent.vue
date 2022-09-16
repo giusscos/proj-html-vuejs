@@ -2,9 +2,10 @@
     <section class="section feedback">
         <div class="content container">
             <HeaderSectionComponent :title="title" />
-            <FeedbackSlideComponent :feedbacks="feedbacks" />
+            <FeedbackSlideComponent :feedbacks="feedbacks" :currentIndex="currentIndex" />
             <div class="goto_wrapper">
-                <span :class="dot.active ? 'active' : ''" class="goto_dot"  v-for="(dot,i) in feedbacks" :key="`${i}dot`">
+                <span class="goto_dot" :class="currentIndex === i ? 'active' : ''"  @click="goTo(i)"
+                    v-for="(dot,i) in feedbacks" :key="`${i}dot`">
                 </span>
             </div>
             <div class="clients_wrapper">
@@ -21,18 +22,16 @@ import FeedbackSlideComponent from './FeedbackSlideComponent.vue';
 
 const feedbacks = [
     {
-        active: true,
         icon: 'testimonials-2.jpg',
         title: 'Luis Desalvo',
         job: 'creo tech',
         feed: 'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.'
     },
     {
-        active: false,
         icon: 'testimonials-1.jpg',
-        title: 'Luisa Desalvo',
-        job: 'creo tech',
-        feed: 'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience.'
+        title: 'Shelia McCourtney',
+        job: 'architect',
+        feed: 'Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.'
     },
 ]
 
@@ -45,16 +44,30 @@ const clients = [
     'clients_partner_6-200x202.png',
 ]
 
+let currentIndex = 0
+
 export default {
     name: "FeedbackComponent.vue",
     props: {
         title: String,
     },
-    components: { HeaderSectionComponent, FeedbackSlideComponent },
-    data(){
+    components: {
+        HeaderSectionComponent,
+        FeedbackSlideComponent
+    },
+    data() {
         return {
             feedbacks,
-            clients
+            clients,
+            currentIndex,
+        }
+    },
+    methods: {
+        goTo(dot) {
+            console.log(dot)
+
+            this.currentIndex = dot
+
         }
     }
 }
@@ -66,16 +79,16 @@ export default {
     padding-bottom: 2.5rem;
     background-color: $pj-text_white;
 
-    .content{
+    .content {
         gap: 1.5rem;
 
-        .clients_wrapper{
+        .clients_wrapper {
             border-top: 1px solid $pj-btn_border_gray;
             display: flex;
             flex-grow: 1;
             justify-content: space-evenly;
-    
-            span{
+
+            span {
                 cursor: pointer;
                 padding: 3rem 0;
                 width: 100px;

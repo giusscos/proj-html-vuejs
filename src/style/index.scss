@@ -116,6 +116,10 @@ img {
     border-radius: 1.25rem;
     padding: 0.81rem 1.5rem;
 
+    &:hover{
+        filter: brightness(1.05);
+    }
+
     &.btn_primary {
         color: $pj-text_white;
         background-color: $pj-btn_bg;
@@ -127,11 +131,16 @@ img {
     }
 
     &.btn_border {
-        border: 1px solid $pj-btn_border_gray;
+        border: 2px solid $pj-btn_border_gray;
 
-        &:hover {
+        &:hover{
+            color: $pj-text_alternative;
+            border: 2px solid $pj-text_alternative;
+        }
+        
+        &.active {
             color: $pj-text_white;
-            border: 1px solid $pj-btn_bg;
+            border: 2px solid $pj-btn_bg;
             background-color: $pj-btn_bg;
         }
     }
@@ -148,16 +157,6 @@ img {
         font-weight: bold;
         color: $pj-text_hover;
         border: 2px solid $pj-text_hover;
-    }
-}
-
-.item_link {
-
-    &:hover {
-        .badge {
-            color: $pj-text_white;
-            background-color: $pj-text_hover;
-        }
     }
 }
 

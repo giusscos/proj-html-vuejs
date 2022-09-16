@@ -1,9 +1,9 @@
 <template>
     <div class="card_component">
         <div class="card_wrapper" v-for="(card,i) in cards" :key="`${i}template`">
-            <span v-if="card.icon">
+            <a href="#" v-if="card.icon">
                 <font-awesome-icon :icon="`fa-solid ${card.icon}`" class="card_icon" />
-                <h3 class="component_title">
+                <h3 class="component_title card_title">
                     {{ card.title }}
                 </h3>
                 <p class="component_desc">
@@ -13,8 +13,8 @@
                     {{ card.link_text }}
                     <font-awesome-icon icon="fa-solid fa-chevron-right" />
                 </a>
-            </span>
-            <span v-else-if="card.plan_category">
+            </a>
+            <a href="#" v-else-if="card.plan_category">
                 <h4 class="plan_category">
                     {{ card.plan_category }}
                 </h4>
@@ -42,12 +42,13 @@
                     {{ card.plan_project_users }} Users
                 </p>
                 <div class="btn_wrapper">
-                    <a href="#" class="btn btn_border component_link uppercase">
+                    <a href="#" class="btn btn_border component_link uppercase" :class="i === 2 ? 'active' : ''">
                         Start today
                     </a>
                 </div>
-            </span>
-            <span v-else-if="card.date">
+            </a>
+            <!-- cards News -->
+            <a href="#" v-else-if="card.date">
                 <div class="card_image_wrapper">
                     <img class="component_img" :src="require(`../assets/img/${card.img}`)"
                         :alt="`news: ${card.title}`" />
@@ -61,7 +62,7 @@
                 <p class="component_desc">
                     {{ card.desc }}
                 </p>
-            </span>
+            </a>
         </div>
     </div>
 </template>
@@ -76,6 +77,17 @@ export default {
 <style lang="scss" scoped>
 @import '../style/index.scss';
 
+.card_wrapper {
+    >a {
+        &:hover {
+            .card_title {
+                color: $pj-text_hover;
+            }
+
+        }
+    }
+}
+
 .services {
     .card_component {
 
@@ -84,7 +96,7 @@ export default {
             color: $pj-text_white;
             background-color: $pj-section_bg_dark;
 
-            .component_desc{
+            .component_desc {
                 line-height: 1.5rem;
                 padding-right: 1.5rem;
                 padding-left: 1.5rem;
@@ -171,9 +183,21 @@ export default {
             background-color: transparent;
 
             .card_image_wrapper {
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                &:hover {
+                    .component_img {
+                        transform: scale(1.1);
+                    }
+                }
 
                 .component_img {
-                    display: inline-block;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 700ms ease-in-out;
+
                 }
             }
 
