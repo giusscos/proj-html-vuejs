@@ -2,13 +2,13 @@
     <section class="section plans">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <CardComponent :cards="plansCard" />
+            <CardPlan :cards="plansCard" />
         </div>
     </section>
 </template>
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue'
-import CardComponent from './CardComponent.vue'
+import CardPlan from './CardPlan.vue'
 
 const plansCard = [
     {
@@ -49,7 +49,7 @@ export default {
     },
     components: {
         HeaderSectionComponent,
-        CardComponent,
+        CardPlan,
     },
     data() {
         return {

@@ -2,13 +2,14 @@
     <section class="section services">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <CardComponent :cards="cardsService" />
+            <!-- <CardComponent :cards="cardsService" /> -->
+            <CardService :cards="cardsService" />
         </div>
     </section>
 </template>
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
-import CardComponent from './CardComponent.vue';
+import CardService from './CardService.vue';
 
 const cardsService = [
     {
@@ -54,7 +55,7 @@ export default {
     },
     components: {
     HeaderSectionComponent,
-    CardComponent
+    CardService
 }
 }
 </script>

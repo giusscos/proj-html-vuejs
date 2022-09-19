@@ -2,7 +2,7 @@
     <section class="section news">
         <div class="content container">
             <HeaderSectionComponent :title="title" :desc="desc" />
-            <CardComponent :cards="cardsNews" />
+            <CardNews :cards="cardsNews" />
             <div class="btn_wrapper">
                 <a href="#" class="btn btn_primary uppercase">
                     Go to news
@@ -13,7 +13,7 @@
 </template>
 <script>
 import HeaderSectionComponent from './HeaderSectionComponent.vue';
-import CardComponent from './CardComponent.vue';
+import CardNews from './CardNews.vue';
 
 const cardsNews = [
     {
@@ -44,7 +44,7 @@ export default {
     },
     components: { 
         HeaderSectionComponent,
-        CardComponent 
+        CardNews 
     },
     data(){
         return {

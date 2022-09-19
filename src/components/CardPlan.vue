@@ -1,20 +1,7 @@
 <template>
     <div class="card_component">
         <div class="card_wrapper" v-for="(card,i) in cards" :key="`${i}template`">
-            <a href="#" v-if="card.icon">
-                <font-awesome-icon :icon="`fa-solid ${card.icon}`" class="card_icon" />
-                <h3 class="component_title card_title">
-                    {{ card.title }}
-                </h3>
-                <p class="component_desc">
-                    {{ card.desc }}
-                </p>
-                <a v-if="card.link_text" :href="card.link_href" class="capitalize component_link">
-                    {{ card.link_text }}
-                    <font-awesome-icon icon="fa-solid fa-chevron-right" />
-                </a>
-            </a>
-            <a href="#" v-else-if="card.plan_category">
+            <a href="#">
                 <h4 class="plan_category">
                     {{ card.plan_category }}
                 </h4>
@@ -47,28 +34,12 @@
                     </a>
                 </div>
             </a>
-            <!-- cards News -->
-            <a href="#" v-else-if="card.date">
-                <div class="card_image_wrapper">
-                    <img class="component_img" :src="require(`../assets/img/${card.img}`)"
-                        :alt="`news: ${card.title}`" />
-                </div>
-                <h3 class="component_title">
-                    {{ card.title }}
-                </h3>
-                <p class="component_date">
-                    {{ card.date }}
-                </p>
-                <p class="component_desc">
-                    {{ card.desc }}
-                </p>
-            </a>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: 'TemplateCardComponent',
+    name: 'CardPlan',
     props: {
         cards: Array,
     }
@@ -84,23 +55,6 @@ export default {
                 color: $pj-text_hover;
             }
 
-        }
-    }
-}
-
-.services {
-    .card_component {
-
-        .card_wrapper {
-            aspect-ratio: 3/2;
-            color: $pj-text_white;
-            background-color: $pj-section_bg_dark;
-
-            .component_desc {
-                line-height: 1.5rem;
-                padding-right: 1.5rem;
-                padding-left: 1.5rem;
-            }
         }
     }
 }
@@ -168,53 +122,6 @@ export default {
                 .component_link {
                     font-size: 0.75rem;
                 }
-            }
-        }
-    }
-}
-
-.news {
-    .card_component {
-        padding-top: 2.5rem;
-        padding-bottom: 2rem;
-
-        .card_wrapper {
-            padding: 0;
-            background-color: transparent;
-
-            .card_image_wrapper {
-                display: flex;
-                justify-content: center;
-                overflow: hidden;
-
-                &:hover {
-                    .component_img {
-                        transform: scale(1.1);
-                    }
-                }
-
-                .component_img {
-                    width: 100%;
-                    object-fit: cover;
-                    transition: 700ms ease-in-out;
-
-                }
-            }
-
-            .component_title {
-                font-size: 1.25rem;
-                padding: 1rem 0 0.5rem;
-                color: $pj-text_hover;
-            }
-
-            .component_date {
-                font-size: 0.8rem;
-                padding-bottom: 0.5rem;
-            }
-
-            .component_desc {
-                line-height: 1.5rem;
-                padding: 0 3rem;
             }
         }
     }
